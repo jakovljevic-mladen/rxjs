@@ -25,5 +25,6 @@ jobs:
         npm ci
     - name: docs
       run: |
-        npm build --prefix docs_app
-        npm docs --prefix docs_app
+        cd docs_app
+        npm run build
+        npm run docs
