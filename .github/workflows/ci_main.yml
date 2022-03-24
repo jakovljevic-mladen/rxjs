@@ -41,4 +41,8 @@ jobs:
     - name: import
       if: ${{ matrix.node == '14' || matrix.node == '15' }}
       run: npm run test:esm
-
+    - name: docs
+      run: |
+        cd docs_app
+        npm build
+        npm docs
