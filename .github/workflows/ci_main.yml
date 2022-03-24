@@ -26,5 +26,5 @@ jobs:
     - name: docs
       run: |
         cd docs_app
+        npm run setup
         npm run build
-        npm run docs
