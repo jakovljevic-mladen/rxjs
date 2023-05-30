@@ -50,6 +50,7 @@ import { createOperatorSubscriber } from '../operators/OperatorSubscriber';
  * @return A function that returns an Observable that emits all values from the
  * source, then synchronously emits the provided value(s) immediately after the
  * source completes.
+ * @operator
  */
 export function endWith<T, A extends readonly unknown[] = T[]>(...values: A): OperatorFunction<T, T | ValueFromArray<A>> {
   return (source) =>

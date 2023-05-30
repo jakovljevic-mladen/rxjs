@@ -42,6 +42,7 @@ import { Observable } from '../Observable';
  * @return A function that returns an Observable that concatenates
  * subscriptions to the source and provided Observables subscribing to the next
  * only once the current subscription completes.
+ * @operator
  */
 export function concatWith<T, A extends readonly unknown[]>(
   ...otherSources: [...ObservableInputTuple<A>]

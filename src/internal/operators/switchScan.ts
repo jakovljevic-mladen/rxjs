@@ -21,6 +21,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * The accumulator function called on each source value.
  * @param seed The initial accumulation value.
  * @return A function that returns an observable of the accumulated values.
+ * @operator
  */
 export function switchScan<T, R, O extends ObservableInput<any>>(
   accumulator: (acc: R, value: T, index: number) => O,

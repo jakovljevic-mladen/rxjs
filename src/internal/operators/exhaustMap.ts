@@ -46,6 +46,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @return A function that returns an Observable containing projected
  * Observables of each item of the source, ignoring projected Observables that
  * start before their preceding Observable has completed.
+ * @operator
  */
 export function exhaustMap<T, O extends ObservableInput<any>>(
   project: (value: T, index: number) => O

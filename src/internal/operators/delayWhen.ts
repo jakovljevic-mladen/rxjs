@@ -88,6 +88,7 @@ export function delayWhen<T>(delayDurationSelector: (value: T, index: number) =>
  * @return A function that returns an Observable that delays the emissions of
  * the source Observable by an amount of time specified by the Observable
  * returned by `delayDurationSelector`.
+ * @operator
  */
 export function delayWhen<T>(
   delayDurationSelector: (value: T, index: number) => ObservableInput<any>,

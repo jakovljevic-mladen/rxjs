@@ -55,6 +55,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @param delay Number of milliseconds that states with what delay every notification should be rescheduled.
  * @return A function that returns an Observable that emits the same
  * notifications as the source Observable, but with provided scheduler.
+ * @operator
  */
 export function observeOn<T>(scheduler: SchedulerLike, delay = 0): MonoTypeOperatorFunction<T> {
   return (source) =>

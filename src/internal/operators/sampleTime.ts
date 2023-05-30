@@ -45,6 +45,7 @@ import { interval } from '../observable/interval';
  * @return A function that returns an Observable that emits the results of
  * sampling the values emitted by the source Observable at the specified time
  * interval.
+ * @operator
  */
 export function sampleTime<T>(period: number, scheduler: SchedulerLike = asyncScheduler): MonoTypeOperatorFunction<T> {
   return sample(interval(period, scheduler));

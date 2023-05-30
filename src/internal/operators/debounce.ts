@@ -62,6 +62,7 @@ import { from } from '../observable/from';
  * @return A function that returns an Observable that delays the emissions of
  * the source Observable by the specified duration Observable returned by
  * `durationSelector`, and may drop some values if they occur too frequently.
+ * @operator
  */
 export function debounce<T>(durationSelector: (value: T) => ObservableInput<any>): MonoTypeOperatorFunction<T> {
   return (source) =>

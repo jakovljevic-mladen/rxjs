@@ -39,6 +39,7 @@ export function every<T>(predicate: (value: T, index: number, source: Observable
  * @param thisArg Optional object to use for `this` in the callback.
  * @return A function that returns an Observable of booleans that determines if
  * all items of the source Observable meet the condition specified.
+ * @operator
  */
 export function every<T>(
   predicate: (value: T, index: number, source: Observable<T>) => boolean,

@@ -61,6 +61,7 @@ import { Observable } from '../Observable';
  * @param callback Function to be called when source terminates.
  * @return A function that returns an Observable that mirrors the source, but
  * will call the specified function on termination.
+ * @operator
  */
 export function finalize<T>(callback: () => void): MonoTypeOperatorFunction<T> {
   return (source) =>

@@ -64,6 +64,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @return A function that returns an Observable that emits the result of
  * applying the projection function to each item emitted by the source Observable
  * and taking only the values from the most recently projected inner Observable.
+ * @operator
  */
 export function switchMap<T, O extends ObservableInput<any>>(
   project: (value: T, index: number) => O

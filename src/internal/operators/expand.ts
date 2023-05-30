@@ -69,6 +69,7 @@ export function expand<T, O extends ObservableInput<unknown>>(
  * and also result of applying the projection function to each value emitted on
  * the output Observable and merging the results of the Observables obtained
  * from this transformation.
+ * @operator
  */
 export function expand<T, O extends ObservableInput<unknown>>(
   project: (value: T, index: number) => O,

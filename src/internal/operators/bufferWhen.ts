@@ -42,6 +42,7 @@ import { from } from '../observable/from';
  * @param closingSelector A function that takes no arguments and returns an
  * Observable that signals buffer closure.
  * @return A function that returns an Observable of arrays of buffered values.
+ * @operator
  */
 export function bufferWhen<T>(closingSelector: () => ObservableInput<any>): OperatorFunction<T, T[]> {
   return (source) =>

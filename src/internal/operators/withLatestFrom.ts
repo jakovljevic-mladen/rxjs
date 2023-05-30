@@ -55,6 +55,7 @@ export function withLatestFrom<T, O extends unknown[], R>(
  * @return A function that returns an Observable of projected values from the
  * most recent values from each input Observable, or an array of the most
  * recent values from each input Observable.
+ * @operator
  */
 export function withLatestFrom<T, R>(...inputs: any[]): OperatorFunction<T, R | any[]> {
   const project = popResultSelector(inputs) as ((...args: any[]) => R) | undefined;

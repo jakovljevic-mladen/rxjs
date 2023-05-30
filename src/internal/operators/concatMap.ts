@@ -56,6 +56,7 @@ import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';
  * @return A function that returns an Observable that emits the result of
  * applying the projection function to each item emitted by the source Observable
  * and taking values from each projected inner Observable sequentially.
+ * @operator
  */
 export function concatMap<T, O extends ObservableInput<any>>(
   project: (value: T, index: number) => O

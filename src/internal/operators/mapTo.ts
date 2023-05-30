@@ -42,6 +42,7 @@ export function mapTo<T, R>(value: R): OperatorFunction<T, R>;
  * @return A function that returns an Observable that emits the given `value`
  * every time the source Observable emits.
  * @deprecated To be removed in v9. Use {@link map} instead: `map(() => value)`.
+ * @operator
  */
 export function mapTo<R>(value: R): OperatorFunction<unknown, R> {
   return map(() => value);

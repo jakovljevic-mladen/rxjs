@@ -294,6 +294,7 @@ export function timeout<T>(each: number, scheduler?: SchedulerLike): MonoTypeOpe
  *
  * @return A function that returns an Observable that mirrors behaviour of the
  * source Observable, unless timeout happens when it throws an error.
+ * @operator
  */
 export function timeout<T, O extends ObservableInput<any>, M>(
   config: number | Date | TimeoutConfig<T, O, M>,

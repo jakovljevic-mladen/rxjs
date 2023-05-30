@@ -54,6 +54,7 @@ import { mergeInternals } from './mergeInternals';
  * @return A function that returns an Observable that emits the result of
  * applying the projection function to each item emitted by the source Observable
  * and merging the results of the Observables obtained from this transformation.
+ * @operator
  */
 export function mergeMap<T, O extends ObservableInput<any>>(
   project: (value: T, index: number) => O,

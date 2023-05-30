@@ -38,6 +38,7 @@ import { Subscriber } from '../Subscriber';
  * @return A function that returns an empty Observable that only calls
  * `complete` or `error`, based on which one is called by the source
  * Observable.
+ * @operator
  */
 export function ignoreElements(): OperatorFunction<unknown, never> {
   return (source) =>

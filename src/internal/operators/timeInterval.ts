@@ -41,6 +41,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @param scheduler Scheduler used to get the current time.
  * @return A function that returns an Observable that emits information about
  * value and interval.
+ * @operator
  */
 export function timeInterval<T>(scheduler: SchedulerLike = asyncScheduler): OperatorFunction<T, TimeInterval<T>> {
   return (source) =>

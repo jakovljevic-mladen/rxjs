@@ -137,6 +137,7 @@ export function share<T>(options: ShareConfig<T>): MonoTypeOperatorFunction<T>;
  * @see {@link shareReplay}
  *
  * @return A function that returns an Observable that mirrors the source.
+ * @operator
  */
 export function share<T>(options: ShareConfig<T> = {}): MonoTypeOperatorFunction<T> {
   const { connector = () => new Subject<T>(), resetOnError = true, resetOnComplete = true, resetOnRefCountZero = true } = options;

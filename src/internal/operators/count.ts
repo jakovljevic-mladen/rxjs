@@ -55,6 +55,7 @@ import { reduce } from './reduce';
  * If the predicate is not provided, every value will be counted.
  * @return A function that returns an Observable that emits one number that
  * represents the count of emissions.
+ * @operator
  */
 export function count<T>(predicate?: (value: T, index: number) => boolean): OperatorFunction<T, number> {
   return reduce((total, value, i) => (!predicate || predicate(value, i) ? total + 1 : total), 0);

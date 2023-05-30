@@ -48,6 +48,7 @@ import { isFunction } from '../util/isFunction';
  * default to compare the value of two items.
  * @return A function that returns an Observable that emits item with the
  * largest value.
+ * @operator
  */
 export function max<T>(comparer?: (x: T, y: T) => number): MonoTypeOperatorFunction<T> {
   return reduce(isFunction(comparer) ? (x, y) => (comparer(x, y) > 0 ? x : y) : (x, y) => (x > y ? x : y));

@@ -41,6 +41,7 @@ import { from } from '../observable/from';
  * buffer to be emitted on the output Observable.
  * @return A function that returns an Observable of buffers, which are arrays
  * of values.
+ * @operator
  */
 export function buffer<T>(closingNotifier: ObservableInput<any>): OperatorFunction<T, T[]> {
   return (source) =>

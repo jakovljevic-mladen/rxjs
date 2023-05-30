@@ -59,6 +59,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @return A function that returns an Observable that delays the emissions of
  * the source Observable by the specified `dueTime`, and may drop some values
  * if they occur too frequently.
+ * @operator
  */
 export function debounceTime<T>(dueTime: number, scheduler: SchedulerLike = asyncScheduler): MonoTypeOperatorFunction<T> {
   return (source) =>

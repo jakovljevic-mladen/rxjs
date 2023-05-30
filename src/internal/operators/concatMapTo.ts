@@ -56,6 +56,7 @@ import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';
  * joining the passed Observable with itself, one after the other, for each
  * value emitted from the source.
  * @deprecated Will be removed in v9. Use {@link concatMap} instead: `concatMap(() => result)`
+ * @operator
  */
 export function concatMapTo<O extends ObservableInput<unknown>>(innerObservable: O): OperatorFunction<unknown, ObservedValueOf<O>> {
   return concatMap(() => innerObservable);

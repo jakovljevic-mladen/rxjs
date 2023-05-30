@@ -59,6 +59,7 @@ import { identity } from '../util/identity';
  * @return A function that returns an Observable that converts a higher-order
  * Observable into a first-order Observable producing values only from the most
  * recent Observable sequence.
+ * @operator
  */
 export function switchAll<O extends ObservableInput<any>>(): OperatorFunction<O, ObservedValueOf<O>> {
   return switchMap(identity);

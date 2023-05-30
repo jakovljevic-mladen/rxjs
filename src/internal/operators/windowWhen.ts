@@ -52,6 +52,7 @@ import { noop } from '../util/noop';
  * observed to signal window closure.
  * @return A function that returns an Observable of windows, which in turn are
  * Observables.
+ * @operator
  */
 export function windowWhen<T>(closingSelector: () => ObservableInput<any>): OperatorFunction<T, Observable<T>> {
   return (source) =>

@@ -51,6 +51,7 @@ import { timer } from '../observable/timer';
  * `trailing` behavior. Defaults to `{ leading: true, trailing: false }`.
  * @return A function that returns an Observable that performs the throttle
  * operation to limit the rate of emissions from the source.
+ * @operator
  */
 export function throttleTime<T>(
   duration: number,

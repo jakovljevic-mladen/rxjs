@@ -101,6 +101,7 @@ export function windowTime<T>(
  * intervals that determine window boundaries.
  * @return A function that returns an Observable of windows, which in turn are
  * Observables.
+ * @operator
  */
 export function windowTime<T>(windowTimeSpan: number, ...otherArgs: any[]): OperatorFunction<T, Observable<T>> {
   const scheduler = popScheduler(otherArgs) ?? asyncScheduler;

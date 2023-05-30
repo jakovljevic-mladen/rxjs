@@ -66,6 +66,7 @@ export function distinctUntilKeyChanged<T, K extends keyof T>(key: K, compare: (
  * from the previous item in the source.
  * @return A function that returns an Observable that emits items from the source
  * Observable with distinct values based on the key specified.
+ * @operator
  */
 export function distinctUntilKeyChanged<T, K extends keyof T>(
   key: K,

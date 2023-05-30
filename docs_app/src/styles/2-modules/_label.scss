@@ -53,13 +53,22 @@ label.raised, .api-header label {
         &.api-status-label {
             background-color: $mediumgray;
 
-            &.impure-pipe {
+            &.deprecated {
                 background-color: $brightred;
             }
 
             &.operator {
-                background-color: $brightred;
+                background-color: $blue-800;
+                cursor: pointer;
             }
+        }
+
+        a {
+            color: inherit;
+            line-height: inherit;
+            font-size: inherit;
+            letter-spacing: inherit;
+            font-weight: inherit;
         }
 
         &.api-type-label {

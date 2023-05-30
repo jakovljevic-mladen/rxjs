@@ -1,21 +1,18 @@
 module.exports = function generateApiListDoc() {
-
   return {
     $runAfter: ['extra-docs-added'],
     $runBefore: ['rendering-docs'],
     outputFolder: null,
-    $validate: {outputFolder: {presence: true}},
-    $process: function(docs) {
+    $validate: { outputFolder: { presence: true } },
+    $process: function (docs) {
       docs.push({
         docType: 'api-list-data',
         template: 'json-doc.template.json',
         path: this.outputFolder + '/api-list.json',
         outputPath: this.outputFolder + '/api-list.json',
-        data: docs
-          .filter(doc => doc.docType === 'module')
-          .map(getModuleInfo)
+        data: docs.filter((doc) => doc.docType === 'module').map(getModuleInfo),
       });
-    }
+    },
   };
 };
 
@@ -25,12 +22,12 @@ function getModuleInfo(moduleDoc) {
     name: moduleName.toLowerCase(),
     title: moduleName,
     items: moduleDoc.exports
-    // Ignore internals and private exports (indicated by the ɵ prefix)
-      .filter(doc => !doc.internal && !doc.privateExport)
-    // Ignore all renamed exports that are just duplicates of other docs
-      .filter(doc => !doc.duplicateOf)
+      // Ignore internals and private exports (indicated by the ɵ prefix)
+      .filter((doc) => !doc.internal && !doc.privateExport)
+      // Ignore all renamed exports that are just duplicates of other docs
+      .filter((doc) => !doc.duplicateOf)
       .map(getExportInfo)
-      .sort((a, b) => a.name === b.name ? 0 : a.name > b.name ? 1 : -1)
+      .sort((a, b) => (a.name === b.name ? 0 : a.name > b.name ? 1 : -1)),
   };
 }
 
@@ -39,9 +36,10 @@ function getExportInfo(exportDoc) {
     name: exportDoc.name.toLowerCase(),
     title: exportDoc.name,
     path: exportDoc.path,
+    operator: !!exportDoc.operator,
     docType: getDocType(exportDoc),
     stability: getStability(exportDoc),
-    securityRisk: !!exportDoc.security
+    securityRisk: !!exportDoc.security,
   };
 }
 
@@ -55,5 +53,5 @@ function getDocType(doc) {
 
 const stabilityProperties = ['stable', 'experimental', 'deprecated'];
 function getStability(doc) {
-  return stabilityProperties.find(prop => doc.hasOwnProperty(prop)) || '';
+  return stabilityProperties.find((prop) => doc.hasOwnProperty(prop)) || '';
 }

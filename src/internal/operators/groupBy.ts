@@ -136,7 +136,9 @@ export function groupBy<T, K, R>(
   connector?: () => Subject<R>
 ): OperatorFunction<T, GroupedObservable<K, R>>;
 
-// Impl
+/**
+ * @operator
+ */
 export function groupBy<T, K, R>(
   keySelector: (value: T) => K,
   elementOrOptions?: ((value: any) => any) | void | BasicGroupByOptions<K, T> | GroupByOptionsWithElement<K, R, T>,

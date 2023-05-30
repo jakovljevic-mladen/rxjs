@@ -48,6 +48,7 @@ import { from } from '../observable/from';
  * previous window and starts a new window.
  * @return A function that returns an Observable of windows, which are
  * Observables emitting values of the source Observable.
+ * @operator
  */
 export function window<T>(windowBoundaries: ObservableInput<any>): OperatorFunction<T, Observable<T>> {
   return (source) =>

@@ -88,6 +88,7 @@ export function single<T>(predicate?: (value: T, index: number, source: Observab
  * Observable.
  * @return A function that returns an Observable that emits the single item
  * emitted by the source Observable that matches the predicate.
+ * @operator
  */
 export function single<T>(predicate?: (value: T, index: number, source: Observable<T>) => boolean): MonoTypeOperatorFunction<T> {
   return (source) =>

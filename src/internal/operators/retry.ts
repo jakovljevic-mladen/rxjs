@@ -80,6 +80,7 @@ export function retry<T>(config: RetryConfig): MonoTypeOperatorFunction<T>;
  * {@link RetryConfig} object.
  * @return A function that returns an Observable that will resubscribe to the
  * source stream when the source stream errors, at most `count` times.
+ * @operator
  */
 export function retry<T>(configOrCount: number | RetryConfig = Infinity): MonoTypeOperatorFunction<T> {
   let config: RetryConfig;

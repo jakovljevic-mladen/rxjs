@@ -71,6 +71,7 @@ export function bufferTime<T>(
  * - `maxBufferSize` - the maximum buffer size;
  * - `scheduler` - the scheduler on which to schedule the intervals that determine buffer boundaries.
  * @return A function that returns an Observable of arrays of buffered values.
+ * @operator
  */
 export function bufferTime<T>(bufferTimeSpan: number, ...otherArgs: any[]): OperatorFunction<T, T[]> {
   const scheduler = popScheduler(otherArgs) ?? asyncScheduler;

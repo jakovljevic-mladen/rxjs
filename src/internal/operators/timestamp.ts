@@ -33,6 +33,7 @@ import { map } from './map';
  * @param timestampProvider An object with a `now()` method used to get the current timestamp.
  * @return A function that returns an Observable that attaches a timestamp to
  * each item emitted by the source Observable indicating when it was emitted.
+ * @operator
  */
 export function timestamp<T>(timestampProvider: TimestampProvider = dateTimestampProvider): OperatorFunction<T, Timestamp<T>> {
   return map((value: T) => ({ value, timestamp: timestampProvider.now() }));

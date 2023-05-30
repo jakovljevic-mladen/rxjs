@@ -36,6 +36,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * that has happened since the subscription, starting from the number `0`.
  * @return A function that returns an Observable that emits the values from the
  * source Observable transformed by the given `project` function.
+ * @operator
  */
 export function map<T, R>(project: (value: T, index: number) => R): OperatorFunction<T, R> {
   return (source) =>

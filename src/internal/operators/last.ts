@@ -76,6 +76,7 @@ export function last<T, D = T>(
  * @return A function that returns an Observable that emits only the last item
  * satisfying the given condition from the source, or an error notification
  * with an `EmptyError` object if no such items are emitted.
+ * @operator
  */
 export function last<T, D>(
   predicate?: ((value: T, index: number, source: Observable<T>) => boolean) | null,

@@ -53,6 +53,7 @@ import { take } from './take';
  * @return A function that returns an Observable that emits a single item, if
  * it is found. Otherwise, it will emit the default value if given. If not, it
  * emits an error.
+ * @operator
  */
 export function elementAt<T, D = T>(index: number, defaultValue?: D): OperatorFunction<T, T | D> {
   if (index < 0) {

@@ -135,6 +135,7 @@ export function distinctUntilChanged<T, K>(
  *
  * @return A function that returns an Observable that emits items from the
  * source Observable with distinct values.
+ * @operator
  */
 export function distinctUntilChanged<T, K>(
   comparator?: (previous: K, current: K) => boolean,

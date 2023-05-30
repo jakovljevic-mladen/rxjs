@@ -63,6 +63,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * source by default.
  * @return A function that returns an Observable of windows, which in turn are
  * Observable of values.
+ * @operator
  */
 export function windowCount<T>(windowSize: number, startWindowEvery: number = 0): OperatorFunction<T, Observable<T>> {
   const startEvery = startWindowEvery > 0 ? startWindowEvery : windowSize;

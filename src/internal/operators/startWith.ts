@@ -48,13 +48,14 @@ export function startWith<T, A extends readonly unknown[] = T[]>(...values: A): 
  * // 'timer emit'
  * ```
  *
- * @param values Items you want the modified Observable to emit first.
- * @return A function that returns an Observable that synchronously emits
- * provided values before subscribing to the source Observable.
- *
  * @see {@link endWith}
  * @see {@link finalize}
  * @see {@link concat}
+ *
+ * @param values Items you want the modified Observable to emit first.
+ * @return A function that returns an Observable that synchronously emits
+ * provided values before subscribing to the source Observable.
+ * @operator
  */
 export function startWith<T, D>(...values: D[]): OperatorFunction<T, T | D> {
   const scheduler = popScheduler(values);

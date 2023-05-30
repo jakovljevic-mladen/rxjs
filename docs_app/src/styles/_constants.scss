@@ -61,17 +61,9 @@ $api-symbols: (
     content: ' ',
     background: $white
   ),
-  decorator: (
-    content: '@',
+  operator: (
+    content: 'O',
     background: $blue-800
-  ),
-  directive: (
-    content: 'D',
-    background: $pink-600
-  ),
-  pipe: (
-    content: 'P',
-    background: $blue-grey-600
   ),
   class: (
     content: 'C',
@@ -105,10 +97,6 @@ $api-symbols: (
     content: 'T',
     background: $light-green-600
   ),
-  module: (
-    content: 'Pk',
-    background: $purple-600
-  )
 );
 
 // OTHER

@@ -59,6 +59,7 @@ import { from } from '../observable/from';
  * @return A function that returns an Observable that emits a single boolean
  * value representing whether or not the values emitted by the source
  * Observable and provided `ObservableInput` were equal in sequence.
+ * @operator
  */
 export function sequenceEqual<T>(
   compareTo: ObservableInput<T>,

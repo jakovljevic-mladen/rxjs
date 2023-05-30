@@ -80,6 +80,7 @@ export function onErrorResumeNextWith<T, A extends readonly unknown[]>(
  * @return A function that returns an Observable that emits values from source
  * Observable, but - if it errors - subscribes to the next passed Observable
  * and so on, until it completes or runs out of Observables.
+ * @operator
  */
 export function onErrorResumeNextWith<T, A extends readonly unknown[]>(
   ...sources: [[...ObservableInputTuple<A>]] | [...ObservableInputTuple<A>]

@@ -48,6 +48,7 @@ import { arrRemove } from '../util/arrRemove';
  * which, when it emits, signals that the associated buffer should be emitted
  * and cleared.
  * @return A function that returns an Observable of arrays of buffered values.
+ * @operator
  */
 export function bufferToggle<T, O>(
   openings: ObservableInput<O>,

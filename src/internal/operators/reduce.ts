@@ -55,6 +55,7 @@ export function reduce<V, A, S = A>(accumulator: (acc: A | S, value: V, index: n
  * @param seed The initial accumulation value.
  * @return A function that returns an Observable that emits a single value that
  * is the result of accumulating the values emitted by the source Observable.
+ * @operator
  */
 export function reduce<V, A>(accumulator: (acc: V | A, value: V, index: number) => A, seed?: any): OperatorFunction<V, V | A> {
   const hasSeed = arguments.length >= 2;

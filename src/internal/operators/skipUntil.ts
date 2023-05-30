@@ -48,6 +48,7 @@ import { noop } from '../util/noop';
  * @return A function that returns an Observable that skips items from the
  * source Observable until the `notifier` Observable emits an item, then emits the
  * remaining items.
+ * @operator
  */
 export function skipUntil<T>(notifier: ObservableInput<any>): MonoTypeOperatorFunction<T> {
   return (source) =>

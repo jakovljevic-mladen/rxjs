@@ -50,6 +50,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @return A function that returns an Observable that emits
  * {@link ObservableNotification} objects that wrap the original emissions from the
  * source Observable with metadata.
+ * @operator
  */
 export function materialize<T>(): OperatorFunction<T, ObservableNotification<T>> {
   return (source) =>

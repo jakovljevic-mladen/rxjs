@@ -86,6 +86,11 @@ li p {
 
 a {
   text-decoration: none;
+  color: $pink;
+
+  &:hover {
+    color: $mediumgray;
+  }
 }
 
 .app-toolbar a {
@@ -148,9 +153,8 @@ code {
 }
 
 .sidenav-content a {
-  color: $pink;
   &:hover {
-    color: $mediumgray;
+    text-decoration: underline;
   }
 }
 

@@ -78,6 +78,7 @@ export function first<T, D = T>(
  * the source.
  * @return A function that returns an Observable that emits the first item that
  * matches the condition.
+ * @operator
  */
 export function first<T, D>(
   predicate?: ((value: T, index: number, source: Observable<T>) => boolean) | null,

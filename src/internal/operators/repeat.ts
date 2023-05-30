@@ -112,6 +112,7 @@ export interface RepeatConfig {
  *
  * @param countOrConfig Either the number of times the source Observable items are repeated
  * (a count of 0 will yield an empty Observable) or a {@link RepeatConfig} object.
+ * @operator
  */
 export function repeat<T>(countOrConfig?: number | RepeatConfig): MonoTypeOperatorFunction<T> {
   let count = Infinity;

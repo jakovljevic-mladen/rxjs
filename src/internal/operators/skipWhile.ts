@@ -48,6 +48,7 @@ export function skipWhile<T>(predicate: (value: T, index: number) => boolean): M
  * @param predicate A function to test each item emitted from the source Observable.
  * @return A function that returns an Observable that begins emitting items
  * emitted by the source Observable when the specified predicate becomes false.
+ * @operator
  */
 export function skipWhile<T>(predicate: (value: T, index: number) => boolean): MonoTypeOperatorFunction<T> {
   return (source) =>

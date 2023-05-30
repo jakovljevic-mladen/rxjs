@@ -50,6 +50,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @return A function that returns an Observable that emits items and
  * notifications embedded in Notification objects emitted by the source
  * Observable.
+ * @operator
  */
 export function dematerialize<N extends ObservableNotification<any>>(): OperatorFunction<N, ValueFromNotification<N>> {
   return (source) =>

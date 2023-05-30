@@ -43,6 +43,7 @@ import { ObservableInputTuple, OperatorFunction } from '../types';
  * @param otherSources the sources to combine the current source with.
  * @return A function that returns an Observable that merges the values from
  * all given Observables.
+ * @operator
  */
 export function mergeWith<T, A extends readonly unknown[]>(
   ...otherSources: [...ObservableInputTuple<A>]

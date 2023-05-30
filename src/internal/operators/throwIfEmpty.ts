@@ -38,6 +38,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * value.
  * @return A function that returns an Observable that throws an error if the
  * source Observable completed without emitting.
+ * @operator
  */
 export function throwIfEmpty<T>(errorFactory: () => any = defaultErrorFactory): MonoTypeOperatorFunction<T> {
   return (source) =>

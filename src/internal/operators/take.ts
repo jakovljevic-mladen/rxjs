@@ -44,6 +44,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @return A function that returns an Observable that emits only the first
  * `count` values emitted by the source Observable, or all of the values from
  * the source if the source emits fewer than `count` values.
+ * @operator
  */
 export function take<T>(count: number): MonoTypeOperatorFunction<T> {
   return count <= 0

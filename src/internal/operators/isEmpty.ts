@@ -62,6 +62,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  *
  * @return A function that returns an Observable that emits boolean value
  * indicating whether the source Observable was empty or not.
+ * @operator
  */
 export function isEmpty<T>(): OperatorFunction<T, boolean> {
   return (source) =>

@@ -94,6 +94,7 @@ const DEFAULT_CONFIG: ConnectConfig<unknown> = {
  * After this function is executed -- and its return value subscribed to -- the
  * operator will subscribe to the source, and the connection will be made.
  * @param config The configuration object for `connect`.
+ * @operator
  */
 export function connect<T, O extends ObservableInput<unknown>>(
   selector: (shared: Observable<T>) => O,

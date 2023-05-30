@@ -39,6 +39,7 @@ import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';
  * given `innerObservable` every time a value is emitted on the source Observable,
  * and taking only the values from the most recently projected inner Observable.
  * @deprecated Will be removed in v9. Use {@link switchMap} instead: `switchMap(() => result)`
+ * @operator
  */
 export function switchMapTo<O extends ObservableInput<unknown>>(innerObservable: O): OperatorFunction<unknown, ObservedValueOf<O>> {
   return switchMap(() => innerObservable);

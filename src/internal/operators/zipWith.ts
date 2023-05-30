@@ -24,6 +24,7 @@ import { zip } from '../observable/zip';
  * @return A function that returns an Observable that emits items by index
  * combined from the source Observable and provided Observables, in form of an
  * array.
+ * @operator
  */
 export function zipWith<T, A extends readonly unknown[]>(...otherInputs: [...ObservableInputTuple<A>]): OperatorFunction<T, Cons<T, A>> {
   return (source) =>

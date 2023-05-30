@@ -62,6 +62,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  * @deprecated Will be removed in v9 or v10, use {@link retry}'s `delay` option instead.
  * Will be removed in v9 or v10. Use {@link retry}'s {@link RetryConfig#delay delay} option instead.
  * Instead of `retryWhen(() => notify$)`, use: `retry({ delay: () => notify$ })`.
+ * @operator
  */
 export function retryWhen<T>(notifier: (errors: Observable<any>) => ObservableInput<any>): MonoTypeOperatorFunction<T> {
   return (source) =>

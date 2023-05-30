@@ -26,7 +26,7 @@ class SearchCriteria {
   selector: 'aio-api-list',
   template: `<div class="l-flex-wrap api-filter">
       <aio-select (change)="setType($event.option)" [options]="types" [selected]="type" [showSymbol]="true" label="Type:"> </aio-select>
-
+      <aio-select (change)="setStatus($event.option)" [options]="statuses" [selected]="status" label="Status:"> </aio-select>
       <div class="form-search">
         <input #filter placeholder="Filter" aria-label="Filter" (input)="setQuery(filter.value)" />
         <i class="material-icons">search</i>
@@ -66,6 +66,7 @@ export class ApiListComponent implements OnInit {
   // API types
   types: Option[] = [
     { value: 'all', title: 'All' },
+    { value: 'operator', title: 'Operator' },
     { value: 'class', title: 'Class' },
     { value: 'const', title: 'Const' },
     { value: 'enum', title: 'Enum' },
@@ -77,7 +78,6 @@ export class ApiListComponent implements OnInit {
   statuses: Option[] = [
     { value: 'all', title: 'All' },
     { value: 'deprecated', title: 'Deprecated' },
-    { value: 'security-risk', title: 'Security Risk' },
   ];
 
   @ViewChild('filter', { static: true }) queryEl: ElementRef;
@@ -134,7 +134,7 @@ export class ApiListComponent implements OnInit {
       }
 
       function matchesType() {
-        return type === 'all' || type === item.docType;
+        return type === 'all' || type === item.docType || (type === 'operator' && item.operator);
       }
     });
 

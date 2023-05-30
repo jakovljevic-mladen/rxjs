@@ -33,6 +33,7 @@ const arrReducer = (arr: any[], value: any) => (arr.push(value), arr);
  *
  * @return A function that returns an Observable that emits an array of items
  * emitted by the source Observable when source completes.
+ * @operator
  */
 export function toArray<T>(): OperatorFunction<T, T[]> {
   // Because arrays are mutable, and we're mutating the array in this

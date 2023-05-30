@@ -41,6 +41,7 @@ import { mergeMap } from './mergeMap';
  * @return A function that returns an Observable that emits items from the
  * given `innerObservable`.
  * @deprecated Will be removed in v9. Use {@link mergeMap} instead: `mergeMap(() => result)`
+ * @operator
  */
 export function mergeMapTo<O extends ObservableInput<unknown>>(
   innerObservable: O,

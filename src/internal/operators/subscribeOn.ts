@@ -59,6 +59,7 @@ import { Observable } from '../Observable';
  * @param delay A delay to pass to the scheduler to delay subscriptions
  * @return A function that returns an Observable modified so that its
  * subscriptions happen on the specified {@link SchedulerLike}.
+ * @operator
  */
 export function subscribeOn<T>(scheduler: SchedulerLike, delay: number = 0): MonoTypeOperatorFunction<T> {
   return (source) =>

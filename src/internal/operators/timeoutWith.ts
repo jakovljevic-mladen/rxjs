@@ -79,6 +79,7 @@ export function timeoutWith<T, R>(waitFor: number, switchTo: ObservableInput<R>,
  * @deprecated Replaced with {@link timeout}. Instead of `timeoutWith(100, a$, scheduler)`, use {@link timeout} with the configuration
  * object: `timeout({ each: 100, with: () => a$, scheduler })`. Instead of `timeoutWith(someDate, a$, scheduler)`, use {@link timeout}
  * with the configuration object: `timeout({ first: someDate, with: () => a$, scheduler })`. Will be removed in v8.
+ * @operator
  */
 export function timeoutWith<T, R>(
   due: number | Date,

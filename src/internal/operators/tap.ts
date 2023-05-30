@@ -154,6 +154,7 @@ export interface TapObserver<T> extends Observer<T> {
  * @param observerOrNext A next handler or partial observer
  * @return A function that returns an Observable identical to the source, but
  * runs the specified Observer or callback(s) for each item.
+ * @operator
  */
 export function tap<T>(observerOrNext?: Partial<TapObserver<T>> | ((value: T) => void) | null): MonoTypeOperatorFunction<T> {
   // Just need to see if it's a function or a partial observer.

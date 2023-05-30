@@ -9,6 +9,7 @@ import { joinAllInternals } from './joinAllInternals';
  *
  * @see {@link zipWith}
  * @see {@link zip}
+ * @operator
  */
 export function zipAll<T>(): OperatorFunction<ObservableInput<T>, T[]>;
 export function zipAll<T>(): OperatorFunction<any, T[]>;

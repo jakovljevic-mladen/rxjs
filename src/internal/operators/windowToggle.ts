@@ -51,6 +51,7 @@ import { arrRemove } from '../util/arrRemove';
  * notification, signals that the associated window should complete.
  * @return A function that returns an Observable of windows, which in turn are
  * Observables.
+ * @operator
  */
 export function windowToggle<T, O>(
   openings: ObservableInput<O>,

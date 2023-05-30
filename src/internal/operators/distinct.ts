@@ -60,6 +60,7 @@ import { from } from '../observable/from';
  * @param flushes Optional `ObservableInput` for flushing the internal HashSet of the operator.
  * @return A function that returns an Observable that emits items from the
  * source Observable with distinct values.
+ * @operator
  */
 export function distinct<T, K>(keySelector?: (value: T) => K, flushes?: ObservableInput<any>): MonoTypeOperatorFunction<T> {
   return (source) =>

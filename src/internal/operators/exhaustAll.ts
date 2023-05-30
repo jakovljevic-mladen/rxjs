@@ -45,6 +45,7 @@ import { identity } from '../util/identity';
  * @return A function that returns an Observable that takes a source of
  * Observables and propagates the first Observable exclusively until it
  * completes before subscribing to the next.
+ * @operator
  */
 export function exhaustAll<O extends ObservableInput<any>>(): OperatorFunction<O, ObservedValueOf<O>> {
   return exhaustMap(identity);

@@ -44,6 +44,7 @@ export function combineLatestAll<R>(project: (...values: Array<any>) => R): Oper
  * Takes each of the most recent values from each collected inner Observable as arguments, in order.
  * @return A function that returns an Observable that flattens Observables
  * emitted by the source Observable.
+ * @operator
  */
 export function combineLatestAll<R>(project?: (...values: Array<any>) => R) {
   return joinAllInternals(combineLatest, project);

@@ -44,6 +44,7 @@ import { createOperatorSubscriber } from './OperatorSubscriber';
  *
  * @return A function that returns an Observable of pairs (as arrays) of
  * consecutive values from the source Observable.
+ * @operator
  */
 export function pairwise<T>(): OperatorFunction<T, [T, T]> {
   return (source) =>

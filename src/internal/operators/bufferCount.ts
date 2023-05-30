@@ -53,6 +53,7 @@ import { arrRemove } from '../util/arrRemove';
  * on every other value from the source. A new buffer is started at the
  * beginning of the source by default.
  * @return A function that returns an Observable of arrays of buffered values.
+ * @operator
  */
 export function bufferCount<T>(bufferSize: number, startBufferEvery: number | null = null): OperatorFunction<T, T[]> {
   // If no `startBufferEvery` value was supplied, then we're
